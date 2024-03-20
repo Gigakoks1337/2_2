@@ -1,18 +1,18 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
-
-public class VerticalPrint {
+import java.util.Scanner;
+public class Main {
     public static void main(String[] args) {
-        String text = "Hello, World!";
-        for (int i = 0; i < text.length(); i++) {
-            System.out.println(text.charAt(i));
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = new int[5];
+        System.out.println("Wpisz 5 liczb:");
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = scanner.nextInt();
         }
-    
-}
-
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+        int min = numbers[0];
+        for (int i = 1; i < 5; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        System.out.println("Najmniejsza liczba to: " + min);
+    }
 }
